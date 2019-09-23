@@ -1,11 +1,12 @@
 package com.example.dialectconvertermobile
 
+import org.dom4j.Document
 import org.dom4j.Node
 import org.dom4j.io.SAXReader
 
-class Converter {
+class Converter (document: Document) {
     private val reader = SAXReader()
-    private val document = reader.read("./data/corpas/dialect_data.xml")
+    private val document = document
     private val cp = ContextProcessor()
 
     /**
